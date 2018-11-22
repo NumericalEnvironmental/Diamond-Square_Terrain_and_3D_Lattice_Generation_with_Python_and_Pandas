@@ -1,6 +1,8 @@
 # Diamond-Square_Terrain_and_3D_Lattice_Generation_with_Python_and_Pandas
 
-This is a relatively short python script (works with versions 2 or 3) for generating fractal surfaces or volumes, starting with an arbitrary initial lattice. By vectorizing operations using both numpy and pandas, the script can process fairly large lattices rapidly. Additional discussion and some example images are provided in my modeling and visualization blog (link pending).
+![Preview](https://numericalenvironmental.files.wordpress.com/2018/11/pancake_layering.jpg?w=1296&h=860)
+
+This is a relatively short python script (works with versions 2 or 3) for generating fractal surfaces or volumes, starting with an arbitrary initial lattice. By vectorizing operations using both numpy and pandas, the script can process fairly large lattices rapidly. Additional discussion and some example images are provided in my modeling and visualization blog (https://numericalenvironmental.wordpress.com/2018/11/22/implementing-a-2d-3d-diamond-square-algorithm-for-generating-terrain-or-correlated-random-field-realizations-using-python-with-pandas/).
 
 The following two input files are required:
 
