@@ -1,0 +1,5 @@
+xN	128
+yN	128
+zN	0
+stdev0	1.0
+rStdevF	0.5
