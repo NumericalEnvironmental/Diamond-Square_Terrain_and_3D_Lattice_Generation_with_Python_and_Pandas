@@ -215,7 +215,7 @@ def Midpoint():
         lattice = Lattice(expanded)
         
         # update iteration parameters
-        N /= 2
+        N = N/2
         stdev *= rStdevF
         itr += 1
         print('Processing iteration #' + str(itr))
