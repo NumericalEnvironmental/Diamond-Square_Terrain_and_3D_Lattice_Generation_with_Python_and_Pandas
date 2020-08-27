@@ -169,7 +169,7 @@ def Midpoint():
 
     # iterate ...
     itr = 0
-    while sum(N>1):
+    while sum((N[0]+N[1]+N[2])>1):
 
         expanded = lattice.data         # initiate expanded lattice data frame
         
@@ -184,7 +184,7 @@ def Midpoint():
             zSubData = Splitter(lattice.data, 'z', stdev)
             expanded = concat([expanded, zSubData], axis=0)
 
-        if sum(N>1)>1:
+        if sum((N[0]+N[1]+N[2])>1)>1:
         
             # add-in blank lattice diamond node locations (calculated, but ignored, for 1-D-only refinement)
             xD, yD, zD = lattice.DiamondPts(N)                 
@@ -215,7 +215,7 @@ def Midpoint():
         lattice = Lattice(expanded)
         
         # update iteration parameters
-        N = N/2
+        N /= 2
         stdev *= rStdevF
         itr += 1
         print('Processing iteration #' + str(itr))
