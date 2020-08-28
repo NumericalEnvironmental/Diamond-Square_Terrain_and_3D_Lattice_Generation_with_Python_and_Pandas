@@ -58,7 +58,7 @@ class Lattice:
 
     def DiamondPts(self, N):
         # return arrays of coordinates for diamond-position lattice nodes for subsequent value population
-        if sum(N>1) == 3:   # refinement of lattice along all three dimensions
+        if sum((N>1).astype('float')) == 3.:   # refinement of lattice along all three dimensions
             xArray = []
             yArray = []
             zArray = []
@@ -169,7 +169,7 @@ def Midpoint():
 
     # iterate ...
     itr = 0
-    while sum((N[0]+N[1]+N[2])>1):
+    while sum((N>1).astype('float')):
 
         expanded = lattice.data         # initiate expanded lattice data frame
         
@@ -184,7 +184,7 @@ def Midpoint():
             zSubData = Splitter(lattice.data, 'z', stdev)
             expanded = concat([expanded, zSubData], axis=0)
 
-        if sum((N[0]+N[1]+N[2])>1)>1:
+        if sum((N>1).astype('float')) > 1.:
         
             # add-in blank lattice diamond node locations (calculated, but ignored, for 1-D-only refinement)
             xD, yD, zD = lattice.DiamondPts(N)                 
